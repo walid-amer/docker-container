@@ -1,0 +1,29 @@
+cmd:
+1-	Nano dockerfile                             (open our docker file)
+2-	Cmd wget  -o-  - q http://ipconfig.me/ip    (using wget to retrive ip )
+3-	 Docker build –t  getmyipadress. 
+4-	Docker run getmyipadress   
+So result : my ip
+
+entrypoint :
+ now if we type :  docker run getmyipadress http://ifconfig.me/ua  
+it return error because we don’t use entrypoint :
+-	nano dockerfile
+(replace cmd …by :)
+-	entrypoint  [“wget”,”-o-“,”-q”]
+-	docker build –t myipadress.
+-	Docker run myipadress http://ifconfig.me/ua (it work)
+-	Docker run myipadress http://ifconfig.me/port
+-	Or 
+-	Docker run myipadress http://ifconfig.me/host.....
+-	
+
+We can mix cmd with entrypoint togather :
+We must add to our docker file after the entrypoint :
+Cmd http://ifconfig.me/ip
+So it the default if we don’t pass any thing
+To test the ne w:
+ build the image :
+ docker  build  –t   getmyipadress.
+Now if we run it :
+-	Docker run getmyipadress                                     (it wil run wget default and run ip)
