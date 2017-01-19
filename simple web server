@@ -1,0 +1,8 @@
+(download a simple web server )
+-	Docker run –d - -publish-all  jpetazzo/web 
+-	-docker images
+-	Docker ps    to show the port 
+acces the container by a web browser using the ip adress of the machine that the container is running on and then using this port number
+-	Ifconfig
+-	From the browser     ip :port
+Hello world
