@@ -1,0 +1,9 @@
+-	Docker  run –it  Ubuntu  bash                              (mack a container )
+-	Dpkg –l  | wc  -l                                           (command to see the number of package installed on the frech ubuntu)
+-	Apt –get update                                            (download the update)
+-	Apt –get install curl                                        (download curl)
+-	Dpkg –l  | wc  -l                                             (we see thate the number of package ++)
+-	Exit
+-	Docker  Run –it  Ubuntu  bash    
+-	Curl                                                        ( command not found because we are i a new one)
+-	Docker ps                                                    (to liste all the container)
