@@ -1,21 +1,23 @@
--	docker volume create --name DataVolume1
--	docker run -ti --rm -v DataVolume1:/datavolume1 ubuntu
--	echo "Example1" > /datavolume1/Example1.txt
+1-
+-	docker volume create --name DataVolume1                      (to Create a DataVolume out of any container till now)
+-	docker run -ti --rm -v DataVolume1:/datavolume1 ubuntu       (creat our first container ubuntu with a datavolume 1 related to our DataVolume)
+-	echo "Example1" > /datavolume1/Example1.txt                  (write Exemple1 inside datavolume1 Exemple1.txt)
 
--	Exit
+-	Exit                                                         (now the container is removed becuase of --rm )
+
 -	docker volume inspect DataVolume1
--	docker run --rm -ti -v DataVolume1:/datavolume1 ubuntu
+-	docker run --rm -ti -v DataVolume1:/datavolume1 ubuntu       (create segond container from ubuntu image with a new datavolume1 related to DataVolume1 )
 -	cat /datavolume1/Example1.txt
              Output
-             Example1
+             Example1                      (so we can read that the old container write in DataVolume1 : we share the data)
 -	exit
 
 
 2-Creating a Volume that Persists when the Container is Removed :
 
-docker run -ti --name=Container2 –v DataVolume2:/datavolume2 ubuntu
--	echo "Example2" > /datavolume2/Example2.txt
--	cat /datavolume2/Example2.txt
+docker run -ti --name=Container2 –v DataVolume2:/datavolume2 ubuntu   (create a new container and a new DataVolume2 and a datavolume2 related to DataVolume2)
+-	echo "Example2" > /datavolume2/Example2.txt                          (wirte Exemple2 in datavolume2/Exemple2.txt)
+-	cat /datavolume2/Example2.txt                                
    Output
    Example2
 
