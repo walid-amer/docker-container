@@ -1,0 +1,6 @@
+-sudo  apt-get  install  docker.io                         (to install docker from the net site)
+- docker version                                          (to get the version of the docker : client and server)
+- sudo groupadd docker                                      (to add a group that we will add users)
+- sudo gpasswd  -a walid docker                               (adding user walid to the docker group)
+- sudo service  docker  restart                               (restart the docker be cause it a service  
+docker run hello-world                                         (it creat a container from the web and run it for testing)
