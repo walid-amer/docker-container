@@ -1,15 +1,16 @@
 cmd:
 1-	Nano dockerfile                             (open our docker file)
 2-	Cmd wget  -o-  - q http://ipconfig.me/ip    (using wget to retrive ip )
-3-	 Docker build –t  getmyipadress. 
-4-	Docker run getmyipadress   
+3-	 Docker build –t  getmyipadress.             (building our docker image from file : dockerfile)
+4-	Docker run getmyipadress                     (construct our docker container from our image :getmyipadress)
 So result : my ip
 
 entrypoint :
  now if we type :  docker run getmyipadress http://ifconfig.me/ua  
 it return error because we don’t use entrypoint :
+so let s adding entrypoint to the file:
 -	nano dockerfile
-(replace cmd …by :)
+  (replace cmd …by :)
 -	entrypoint  [“wget”,”-o-“,”-q”]
 -	docker build –t myipadress.
 -	Docker run myipadress http://ifconfig.me/ua (it work)
@@ -19,10 +20,11 @@ it return error because we don’t use entrypoint :
 -	
 
 We can mix cmd with entrypoint togather :
+
 We must add to our docker file after the entrypoint :
 Cmd http://ifconfig.me/ip
 So it the default if we don’t pass any thing
-To test the ne w:
+To test the new:
  build the image :
  docker  build  –t   getmyipadress.
 Now if we run it :
