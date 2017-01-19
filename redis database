@@ -1,17 +1,21 @@
 -	DOCKER PULL REDIS                                (TO DOWNLOAD THE IMAGE FROM THE HUB)
-      -  DOCKER IMAGES                               (WE WILL SEE IT)
+      DOCKER IMAGES                                    (WE WILL SEE IT)
      - Docker run –it - - name redisclient1 --link redisserver:redis  redis sh
                  (Run a other container of the redis image called redis client )
                  : redis is the alias of redisserver in the new container 
-                Now connect to the redis server
+                 
+     Now connect to the redis server
 - Redis-cli –h redis
-              : let save sume data:
--	Setmyname walid
--	Set my country Lebanon
+     let save sume data:
+Setmyname walid
+Set my country Lebanon
                If I do  
-      - get myname wil return walid
-                       run a nother client container and connect to the server I should be able to get the data :
+  get myname wil return walid
+  
+               run a nother client container and connect to the server I should be able to get the data :
+                       
 -	Docker run –it - - name redisclient2 --link redisserver:redis  redis sh
 -	Redis-cli –h redis
 -	Get myname : it givs walid
+
 Nb(we are here in a new container)
