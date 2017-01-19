@@ -1,0 +1,8 @@
+	Create a directory named: apache-php that containe : dockerfile and apache-php file and a directory named www contain index.php file 
+	Docker  build  –t=” mywebsite” .       ( the . To tell as to  build from the directory)
+
+     NOW THE IMAGE IS build and  READY LETS RUN IT :
+	docker run –d –p 8080:80 mywebsite
+now from  firefox: 
+	-localhost:8080 
+     Hello
