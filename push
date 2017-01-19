@@ -1,0 +1,11 @@
+Once you’ve built or created a new image you can push it to Docker Hub using :
+- docker images                                           (to show the local images)
+- docker tag image-id wamer/mywebsite                     (exemple) (it appear a new image    
+   locally as wamer/mywebsite)
+-docker images                                              (it appear)
+-docker login
+  User name(w....) and password(m….)
+-docker push wamer/mywebsite                               (push to repository in cloud)
+                                                            Now we can see our images in docker hub account 
+And we can pull it:  - docker pull wamer/mywebsite
+ 
