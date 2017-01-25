@@ -1,11 +1,17 @@
 -	DOCKER PULL REDIS                                (TO DOWNLOAD THE IMAGE FROM THE HUB)
       DOCKER IMAGES                                    (WE WILL SEE IT)
+     - Docker run –d  - - name redisserver  redis 
      - Docker run –it - - name redisclient1 --link redisserver:redis  redis sh
-                 (Run a other container of the redis image called redis client )
-                 : redis is the alias of redisserver in the new container 
+                 (Run a other container of the redis image called redis client 
+                 : redis is the alias to pooint to the server container ) 
+      to test the connection between client and server :
+       - cat /etc/hosts 
+        (we can SEE the port id of the server and the ip so we can ping it  )
+        
                  
      Now connect to the redis server
-- Redis-cli –h redis
+- Redis-cli –h redis    (cli mean client : and h mean host : connectcfrom client to server : you can test by : ping it giv pong. inside server now)
+
      let save sume data:
 Setmyname walid
 Set my country Lebanon
