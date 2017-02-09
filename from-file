@@ -1,6 +1,6 @@
  Create a directory named: apache-php that containe :
 	
- dockerfile and apache-php file and a directory named www contain index.php file
+ dockerfile file and apache-php file and a directory named www contain index.php file
 
 code:
 
